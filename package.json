@@ -1,0 +1,31 @@
+{
+  "name": "api-receitas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Guilherme Suganame",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "knex": "^2.3.0",
+    "sqlite3": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.14",
+    "jest": "^29.0.3",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.3"
+  },
+  "scripts": {
+    "dev": "ts-node-dev src/server.ts",
+    "build": "tsc",
+    "start": "tsc & node dist/server.js",
+    "test": "jest",
+    "knex-migrate-dev": "knex --knexfile src/knexfile.ts migrate:latest",
+    "knex-rollback-dev": "knex --knexfile src/knexfile.ts migrate:rollback",
+    "knex-migrate": "tsc & knex --knexfile dist/knexfile.ts migrate:latest",
+    "knex-rollback": "tsc & knex --knexfile dist/knexfile.ts migrate:rollback"
+  }
+}
