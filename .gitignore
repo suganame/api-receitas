@@ -2,9 +2,9 @@
 /dist
 ./dist
 dist
-yarn.lock
-package-lock.json
 
 *.sqlite3
 *.sqlite
 *.lock
+/yarn.lock
+/src/database/database.sqlite3
