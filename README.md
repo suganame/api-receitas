@@ -30,8 +30,8 @@ Cria uma receita
 
 ```jsonc
 
-{
-  /* Body */
+/* Body */
+{  
   "descricao": "bolinho de chuva",
   "tempo_preparo": "30 minutos",
   "rendimento": "25 porções",
@@ -44,8 +44,8 @@ Cria uma receita
 Altera a receita de acordo com o id informado
 
 ```jsonc
+/* Body */
 {
-  /* Body */
   "descricao": "bolinho de chuva",
   "tempo_preparo": "30 minutos"
 }
