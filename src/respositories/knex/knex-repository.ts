@@ -2,6 +2,7 @@ import knex from "../../database/connection";
 import {
   ReceitaCreateData,
   ReceitaDeleteData,
+  ReceitaGetData,
   ReceitaRepository,
   ReceitaUpdateData,
 } from "../receitas-repository";
@@ -21,8 +22,8 @@ export class KnexReceitasRepository implements ReceitaRepository {
     });
   }
 
-  async index() {
-    const data = await knex("receitas");
+  async index({ limit, offset }: ReceitaGetData) {
+    const data = await knex("receitas").limit(limit).offset(offset);
     return data;
   }
 

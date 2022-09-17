@@ -25,9 +25,14 @@ export interface ReceitaDeleteData {
   id: string;
 }
 
+export interface ReceitaGetData {
+  limit: number;
+  offset: number;
+}
+
 export interface ReceitaRepository {
   create: (data: ReceitaCreateData) => Promise<void>;
-  index: () => Promise<ReceitaData[]>;
+  index: (data: ReceitaGetData) => Promise<ReceitaData[]>;
   update: (data: ReceitaUpdateData) => Promise<void>;
   delete: (data: ReceitaDeleteData) => Promise<void>;
 }

@@ -36,10 +36,21 @@ class ReceitaController {
 
   async index(req: Request, res: Response) {
     try {
+      let { limit, offset }: any = req.query;
+
+      limit = parseInt(limit || 10);
+      offset = parseInt(offset || 0);
+
+      console.log(limit);
+      console.log(offset);
+
       const knexReceitasRepository = new KnexReceitasRepository();
       const getReceitasUseCase = new GetReceitaUseCase(knexReceitasRepository);
 
-      const data = await getReceitasUseCase.execute();
+      const data = await getReceitasUseCase.execute({
+        limit,
+        offset,
+      });
 
       return res.status(201).json({
         success: true,
