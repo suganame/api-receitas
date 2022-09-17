@@ -9,5 +9,5 @@
 
 ## Como Rodar
 
-. Rodar o comando `npm install` para que seja instalado todas as depedências do projeto.
-. Executar o comando `npm run knex-migrate`, para que seja criado o banco de dados sqlite e as tabelas necessárias.
+1. Rodar o comando `npm install` para que seja instalado todas as depedências do projeto.
+2. Executar o comando `npm run knex-migrate`, para que seja criado o banco de dados sqlite e as tabelas necessárias.
