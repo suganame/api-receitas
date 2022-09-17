@@ -2,12 +2,23 @@ import knex from "../../database/connection";
 import {
   ReceitaCreateData,
   ReceitaDeleteData,
-  ReceitaGetData,
+  ReceitaIndexParams,
   ReceitaRepository,
+  ReceitaShowParams,
   ReceitaUpdateData,
 } from "../receitas-repository";
 
 export class KnexReceitasRepository implements ReceitaRepository {
+  async index({ limit, offset }: ReceitaIndexParams) {
+    const data = await knex("receitas").limit(limit).offset(offset);
+    return data;
+  }
+
+  async show({ id }: ReceitaShowParams) {
+    const data = await knex("receitas").where("id", id).first();
+    return data;
+  }
+
   async create({
     descricao,
     tempo_preparo,
@@ -20,11 +31,6 @@ export class KnexReceitasRepository implements ReceitaRepository {
       rendimento,
       instrucao_adicional,
     });
-  }
-
-  async index({ limit, offset }: ReceitaGetData) {
-    const data = await knex("receitas").limit(limit).offset(offset);
-    return data;
   }
 
   async update({

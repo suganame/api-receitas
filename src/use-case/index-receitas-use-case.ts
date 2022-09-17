@@ -1,14 +1,14 @@
 import { ReceitaRepository } from "../respositories/receitas-repository";
 
-interface GetReceitaUseCaseRequest {
+interface IndexReceitaUseCaseRequest {
   limit: number;
   offset: number;
 }
 
-export class GetReceitaUseCase {
+export class IndexReceitaUseCase {
   constructor(private receitaRepository: ReceitaRepository) {}
 
-  async execute(request: GetReceitaUseCaseRequest) {
+  async execute(request: IndexReceitaUseCaseRequest) {
     const { limit, offset } = request;
 
     const data = await this.receitaRepository.index({
