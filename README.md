@@ -29,7 +29,7 @@ Busca a receita com o id especificado.
 Cria uma receita
 
 ```json
-// Body
+/* Body */
 {
   "descricao": "bolinho de chuva",
   "tempo_preparo": "30 minutos",
@@ -43,7 +43,7 @@ Cria uma receita
 Altera a receita de acordo com o id informado
 
 ```json
-// Body
+/* Body */
 {
   "descricao": "bolinho de chuva",
   "tempo_preparo": "30 minutos"
