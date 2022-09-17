@@ -1,6 +1,6 @@
 ## Overview
 
-<p>Crud do backend de um sistema de receita simples para fins didáticos. O sistema foi desenvolvido com intuito de aplicar o conhecimento adquirido sobre Clean Architecture.</p>
+<p>Crud do backend de um sistema de receita para fins didáticos. O sistema foi desenvolvido com intuito de aplicar o conhecimento adquirido sobre Clean Architecture.</p>
 
 ## Requisitos
 
