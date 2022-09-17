@@ -28,7 +28,7 @@ Busca a receita com o id especificado.
 
 Cria uma receita
 
-```json
+```jsonc
 
 {
   /* Body */
@@ -43,7 +43,7 @@ Cria uma receita
 
 Altera a receita de acordo com o id informado
 
-```json
+```jsonc
 {
   /* Body */
   "descricao": "bolinho de chuva",
