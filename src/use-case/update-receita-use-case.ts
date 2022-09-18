@@ -2,10 +2,10 @@ import { ReceitaRepository } from "../respositories/receitas-repository";
 
 interface UpdateReceitaUseCaseRequest {
   id: string;
-  descricao: string;
-  tempo_preparo: string;
-  rendimento: string;
-  instrucao_adicional: string;
+  descricao?: string;
+  tempo_preparo?: string;
+  rendimento?: string;
+  instrucao_adicional?: string;
 }
 
 export class UpdateReceitaUseCase {

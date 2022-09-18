@@ -25,12 +25,21 @@ export class KnexReceitasRepository implements ReceitaRepository {
     rendimento,
     instrucao_adicional,
   }: ReceitaCreateData) {
-    await knex("receitas").insert({
-      descricao,
-      tempo_preparo,
-      rendimento,
-      instrucao_adicional,
-    });
+    const data = await knex("receitas")
+      .insert({
+        descricao,
+        tempo_preparo,
+        rendimento,
+        instrucao_adicional,
+      })
+      .returning([
+        "id",
+        "descricao",
+        "tempo_preparo",
+        "rendimento",
+        "instrucao_adicional",
+      ]);
+    return data[0];
   }
 
   async update({

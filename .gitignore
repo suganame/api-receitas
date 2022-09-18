@@ -8,3 +8,4 @@ dist
 *.lock
 /yarn.lock
 /src/database/database.sqlite3
+/coverage

@@ -14,11 +14,13 @@ export class CreateReceitaUseCase {
     const { descricao, tempo_preparo, rendimento, instrucao_adicional } =
       request;
 
-    await this.receitaRepository.create({
+    const id = await this.receitaRepository.create({
       descricao,
       tempo_preparo,
       rendimento,
       instrucao_adicional,
     });
+
+    return id;
   }
 }
