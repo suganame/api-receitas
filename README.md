@@ -1,6 +1,6 @@
 ## Overview
 
-<p>Crud do backend de um sistema de receita simples para fins didáticos. O sistema foi desenvolvido com intuito de aplicar o conhecimento adquirido sobre Clean Architecture.</p>
+<p>Crud do backend de um sistema de receita para fins didáticos. O sistema foi desenvolvido com o objetivo de aplicar o conhecimento adquirido sobre Clean Architecture.</p>
 
 ## Requisitos
 
@@ -28,9 +28,10 @@ Busca a receita com o id especificado.
 
 Cria uma receita
 
-```json
-// Body
-{
+```jsonc
+
+/* Body */
+{  
   "descricao": "bolinho de chuva",
   "tempo_preparo": "30 minutos",
   "rendimento": "25 porções",
@@ -42,8 +43,8 @@ Cria uma receita
 
 Altera a receita de acordo com o id informado
 
-```json
-// Body
+```jsonc
+/* Body */
 {
   "descricao": "bolinho de chuva",
   "tempo_preparo": "30 minutos"
