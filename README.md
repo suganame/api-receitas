@@ -4,7 +4,7 @@
 
 ## Requisitos
 
-- NodeJS (16.17.0)
+- NodeJS (>= 14.18.0)
 - Postman ou Insomnia (Ou qualquer ferramenta para rexecutar requisições API)
 
 ## Como Rodar
